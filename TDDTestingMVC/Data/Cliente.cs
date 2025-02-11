@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace TDDTestingMVC.Models
+namespace TDDTestingMVC.data
 {
     public class Cliente
     {
@@ -21,6 +21,7 @@ namespace TDDTestingMVC.Models
         [Required]
         public string Direccion { get; set; }
         [Required]
-        public Boolean Estado { get; set; }
+        public string Estado { get; set; }
+
     }
 }

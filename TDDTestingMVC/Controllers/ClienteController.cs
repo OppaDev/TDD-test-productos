@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using TDDTestingMVC.Data;
-using TDDTestingMVC.Models;
+using TDDTestingMVC.data;
 
 namespace TDDTestingMVC.Controllers
 {
@@ -10,15 +9,25 @@ namespace TDDTestingMVC.Controllers
         public IActionResult Index()
         {
             List<Cliente> clientes = new List<Cliente>();
-            clientes = objClienteDAL.GetClientes().ToList();
-
+            clientes = objClienteDAL.GetAllClientes().ToList();
+            return View(clientes);
+        }
+        [HttpGet]
+        public IActionResult Create()
+        {
             return View();
         }
-
-        public string saludos()
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Create([Bind] Cliente objCliente)
         {
-            return "Bienvenidos";
-        }
+            if (ModelState.IsValid)
+            {
+                objClienteDAL.AddCliente(objCliente);
+                return RedirectToAction("Index");
 
+            }
+            return View(objCliente);
+        }
     }
 }

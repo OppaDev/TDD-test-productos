@@ -1,7 +1,43 @@
-﻿
-@{
-    ViewData["Title"] = "Index";
+﻿@{
+    ViewData["Title"] = "Clientes";
 }
+<div>
+    <h2>Clientes</h2>
+    <p>Bienvenido a la página de clientes.</p>
+    <div class="table-responsive">
+        <table class="table align-middle">
+            <thead>
+                <tr>
+                    <th>Código</th>
+                    <th>Cédula</th>
+                    <th>Apellidos</th>
+                    <th>Nombres</th>
+                    <th>Fecha de Nacimiento</th>
+                    <th>Mail</th>
+                    <th>Teléfono</th>
+                    <th>Dirección</th>
+                    <th>Estado</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var cliente in Model)
+                {
+                    <tr>
+                        <td>@cliente.Codigo</td>
+                        <td>@cliente.Cedula</td>
+                        <td>@cliente.Apellidos</td>
+                        <td>@cliente.Nombres</td>
+                        <td>@cliente.FechaNacimiento.ToShortDateString()</td>
+                        <td>@cliente.Mail</td>
+                        <td>@cliente.Telefono</td>
+                        <td>@cliente.Direccion</td>
+                        <td>@cliente.Estado</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <a asp-action="Create">Crear Cliente</a>
+    </div>
+</div>
 
-<h1>Index</h1>
 
