@@ -17,6 +17,7 @@
                     <th>Teléfono</th>
                     <th>Dirección</th>
                     <th>Estado</th>
+					<th>Opciones</th>
                 </tr>
             </thead>
             <tbody>
@@ -32,11 +33,16 @@
                         <td>@cliente.Telefono</td>
                         <td>@cliente.Direccion</td>
                         <td>@cliente.Estado</td>
+						<td>
+							<a asp-action="Edit" asp-route-id="@cliente.Codigo"> <i class="bi bi-pencil-square"></i></a>
+							<a asp-action="Details" asp-route-id="@cliente.Codigo"> <i class="bi bi-eye"></i></a>
+							<a asp-action="Delete" asp-route-id="@cliente.Codigo"> <i class="bi bi-trash"></i></a>
+						</td>
                     </tr>
                 }
             </tbody>
         </table>
-        <a asp-action="Create">Crear Cliente</a>
+        <a class="btn btn-primary" role="button" asp-action="Create"> <i class="bi bi-plus-square"></i>Nuevo Cliente</a>
     </div>
 </div>
 
