@@ -27,7 +27,7 @@ namespace ReqnrollTestProject.StepDefinitions
         [BeforeTestRun]
         public static void BeforeTestRun()
         {
-            var sparkReporter = new ExtentSparkReporter("Report/ExtentReport.html");
+            var sparkReporter = new ExtentSparkReporter("ExtentReport.html");
             _extent = new ExtentReports();
             _extent.AttachReporter(sparkReporter);
         }
@@ -61,10 +61,10 @@ namespace ReqnrollTestProject.StepDefinitions
             foreach (var item in cliente)
             {
                 _driver.FindElement(By.Name("Cedula")).SendKeys(item.Cedula);
-                _driver.FindElement(By.Name("Apellido")).SendKeys(item.Apellidos);
-                _driver.FindElement(By.Name("Nombre")).SendKeys(item.Nombres);
+                _driver.FindElement(By.Name("Apellidos")).SendKeys(item.Apellidos);
+                _driver.FindElement(By.Name("Nombres")).SendKeys(item.Nombres);
                 _driver.FindElement(By.Name("FechaNacimiento")).SendKeys(item.FechaNacimiento.ToString());
-                _driver.FindElement(By.Name("Email")).SendKeys(item.Mail);
+                _driver.FindElement(By.Name("Mail")).SendKeys(item.Mail);
                 _driver.FindElement(By.Name("Telefono")).SendKeys(item.Telefono);
                 _driver.FindElement(By.Name("Direccion")).SendKeys(item.Direccion);
                 _driver.FindElement(By.Name("Estado")).SendKeys(item.Estado);
@@ -78,8 +78,8 @@ namespace ReqnrollTestProject.StepDefinitions
         {
             try
             {
-                _driver.FindElement(By.CssSelector("button[data-qa='create-button']")).Click();
-                bool isCreated = _driver.FindElement(By.CssSelector("button[data-qa='create-button']")) != null;
+                _driver.FindElement(By.Id("btnCrear")).Click();
+                bool isCreated = _driver.FindElement(By.Id("btnCrear")) != null;
                 _test?.Log(Status.Pass, "Usuario hizo clic corrctamente");
             }
             catch (NoSuchElementException)

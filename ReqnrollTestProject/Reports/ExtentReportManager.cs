@@ -12,7 +12,7 @@ namespace ReqnrollTestProject.Reports
     {
         private static ExtentReports _extent;
         private static ExtentTest _test;
-        private static string _reportPath = Path.Combine(Directory.GetCurrentDirectory(), "/Reports/TestsResults", "ExtentReport.html");
+        private static string _reportPath = Path.Combine(Directory.GetCurrentDirectory(), "Reports", "TestsResults", "ExtentReport.html");
 
         public static void InitReport()
         {
