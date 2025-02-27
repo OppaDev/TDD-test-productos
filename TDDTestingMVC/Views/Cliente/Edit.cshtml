@@ -1,4 +1,4 @@
-﻿@model TDDTestingMVC.data.Cliente
+﻿@model Cliente
 @{
     ViewData["Title"] = "Edit";
 }
@@ -10,52 +10,52 @@
         <form asp-action="Edit">
 			<div class="form-group">
 				<label asp-for="Codigo" class="control-label"></label>
-                <input asp-for="Codigo" class="form-control" />
+                <input asp-for="Codigo" class="form-control" name="Codigo" />
 				<span asp-validation-for="Codigo" class="text-danger" ></span>
 			</div>
             <div class="form-group">
                 <label asp-for="Cedula" class="control-label"></label>
-                <input asp-for="Cedula" class="form-control" />
+                <input asp-for="Cedula" class="form-control" name="Cedula"/>
                 <span asp-validation-for="Cedula" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Apellidos" class="control-label"></label>
-                <input asp-for="Apellidos" class="form-control" />
+                <input asp-for="Apellidos" class="form-control" name="Apellido"/>
                 <span asp-validation-for="Apellidos" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Nombres" class="control-label"></label>
-                <input asp-for="Nombres" class="form-control" />
+                <input asp-for="Nombres" class="form-control" name="Nombre" />
                 <span asp-validation-for="Nombres" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="FechaNacimiento" class="control-label"></label>
-                <input asp-for="FechaNacimiento" class="form-control" />
+                <input asp-for="FechaNacimiento" class="form-control" name="FechaNacimiento"/>
                 <span asp-validation-for="FechaNacimiento" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Mail" class="control-label"></label>
-                <input asp-for="Mail" class="form-control" />
+                <input asp-for="Mail" class="form-control" name="Email"/>
                 <span asp-validation-for="Mail" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Telefono" class="control-label"></label>
-                <input asp-for="Telefono" class="form-control" />
+                <input asp-for="Telefono" class="form-control" name="Telefono"/>
                 <span asp-validation-for="Telefono" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Direccion" class="control-label"></label>
-                <input asp-for="Direccion" class="form-control" />
+                <input asp-for="Direccion" class="form-control" name="Direccion"/>
                 <span asp-validation-for="Direccion" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Estado" class="control-label"></label>
-                <input asp-for="Estado" class="form-check-input" type="checkbox" />
+                <input asp-for="Estado" class="form-check-input" type="checkbox" name="Estado" />
                 <span asp-validation-for="Estado" class="text-danger"></span>
             </div>
             <div class="form-group btn-group" role="group" aria-label="Basic outlined example">
                 <a class="btn btn-outline-primary" role="button" asp-action="Index"> Regresar </a>
-                <input type="submit" value="Guardar" class="btn btn-outline-primary" />
+                <input type="submit" value="Guardar" class="btn btn-outline-primary" id="btnEditar"/>
             </div>
         </form>
     </div>

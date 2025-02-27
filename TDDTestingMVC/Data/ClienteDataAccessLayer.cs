@@ -1,6 +1,7 @@
 ﻿using Microsoft.Data.SqlClient;
 using System.Data;
 using System.Data.SqlTypes;
+using TDDTestingMVC.Models;
 
 namespace TDDTestingMVC.data
 {

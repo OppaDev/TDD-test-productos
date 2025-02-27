@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using TDDTestingMVC.data;
+using TDDTestingMVC.Models;
 
 namespace TDDTestingMVC.Controllers
 {

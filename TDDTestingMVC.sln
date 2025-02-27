@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TDDTestingMVC", "TDDTesting
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestCliente", "TestCliente\TestCliente.csproj", "{540E68D3-3F77-4CE7-8158-19310B3533FD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReqnrollTestProject", "ReqnrollTestProject\ReqnrollTestProject.csproj", "{582547D3-D7F4-4EF9-88CE-1CD4E64797FD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{540E68D3-3F77-4CE7-8158-19310B3533FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{540E68D3-3F77-4CE7-8158-19310B3533FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{540E68D3-3F77-4CE7-8158-19310B3533FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{582547D3-D7F4-4EF9-88CE-1CD4E64797FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{582547D3-D7F4-4EF9-88CE-1CD4E64797FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{582547D3-D7F4-4EF9-88CE-1CD4E64797FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{582547D3-D7F4-4EF9-88CE-1CD4E64797FD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

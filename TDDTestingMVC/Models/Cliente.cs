@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace TDDTestingMVC.data
+namespace TDDTestingMVC.Models
 {
     public class Cliente
     {

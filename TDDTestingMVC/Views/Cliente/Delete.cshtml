@@ -1,11 +1,11 @@
-﻿@model TDDTestingMVC.data.Cliente
+﻿@model Cliente
 @{
     ViewData["Title"] = "Delete";
 }
 
-<h1>Eliminar</h1>
 
-<h3>Estás seguro de eliminar a @Html.DisplayFor(model => model.Nombres)?</h3>
+
+<h3 class="text-danger">Estás seguro de eliminar a @Html.DisplayFor(model => model.Nombres)?</h3>
 
 <div>
 	<h4>Detalles</h4>
@@ -63,7 +63,7 @@
 	<form asp-action="Delete">
 		<div class ="form-group btn-group" role="group" aria-label="Basic outlined example">
 			<input type="hidden" asp-for="Codigo" />
-			<input type="submit" value="Eliminar" class="btn btn-outline-danger" />
+			<input type="submit" value="Eliminar" class="btn btn-outline-danger" id="btnEliminar" />
 			<a class="btn btn-outline-primary" role="button" asp-action="Index">Regresar</a>
 		</div>
 	</form>
