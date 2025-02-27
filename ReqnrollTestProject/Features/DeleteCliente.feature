@@ -1,4 +1,4 @@
-﻿Feature: Area
+﻿Feature: DeleteCliente
 
 A short summary of the feature
 

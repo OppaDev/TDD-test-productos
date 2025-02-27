@@ -112,7 +112,7 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 await this.ScenarioStartAsync();
-                global::Reqnroll.Table table4 = new global::Reqnroll.Table(new string[] {
+                global::Reqnroll.Table table1 = new global::Reqnroll.Table(new string[] {
                             "Cedula",
                             "Apellidos",
                             "Nombres",
@@ -121,7 +121,7 @@ this.ScenarioInitialize(scenarioInfo);
                             "Telefono",
                             "Direccion",
                             "Estado"});
-                table4.AddRow(new string[] {
+                table1.AddRow(new string[] {
                             "0402084040",
                             "Muñoz",
                             "Jose",
@@ -131,9 +131,9 @@ this.ScenarioInitialize(scenarioInfo);
                             "Quito",
                             "1"});
 #line 7
- await testRunner.GivenAsync("Completar la informacion en el formulario", ((string)(null)), table4, "Given ");
+ await testRunner.GivenAsync("Completar la informacion en el formulario", ((string)(null)), table1, "Given ");
 #line hidden
-                global::Reqnroll.Table table5 = new global::Reqnroll.Table(new string[] {
+                global::Reqnroll.Table table2 = new global::Reqnroll.Table(new string[] {
                             "Cedula",
                             "Apellidos",
                             "Nombres",
@@ -142,7 +142,7 @@ this.ScenarioInitialize(scenarioInfo);
                             "Telefono",
                             "Direccion",
                             "Estado"});
-                table5.AddRow(new string[] {
+                table2.AddRow(new string[] {
                             "0402084040",
                             "Muñoz",
                             "Jose",
@@ -152,9 +152,9 @@ this.ScenarioInitialize(scenarioInfo);
                             "Quito",
                             "1"});
 #line 10
- await testRunner.WhenAsync("Registro del Cliente en la BDD", ((string)(null)), table5, "When ");
+ await testRunner.WhenAsync("Registro del Cliente en la BDD", ((string)(null)), table2, "When ");
 #line hidden
-                global::Reqnroll.Table table6 = new global::Reqnroll.Table(new string[] {
+                global::Reqnroll.Table table3 = new global::Reqnroll.Table(new string[] {
                             "Cedula",
                             "Apellidos",
                             "Nombres",
@@ -163,7 +163,7 @@ this.ScenarioInitialize(scenarioInfo);
                             "Telefono",
                             "Direccion",
                             "Estado"});
-                table6.AddRow(new string[] {
+                table3.AddRow(new string[] {
                             "0402084040",
                             "Muñoz",
                             "Jose",
@@ -173,7 +173,7 @@ this.ScenarioInitialize(scenarioInfo);
                             "Quito",
                             "1"});
 #line 13
- await testRunner.ThenAsync("El resultado del rgistro en la BDD", ((string)(null)), table6, "Then ");
+ await testRunner.ThenAsync("El resultado del rgistro en la BDD", ((string)(null)), table3, "Then ");
 #line hidden
             }
             await this.ScenarioCleanupAsync();

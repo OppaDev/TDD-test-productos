@@ -19,21 +19,21 @@ namespace ReqnrollTestProject.Features
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Reqnroll", "2.0.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public partial class AreaFeature : object, Xunit.IClassFixture<AreaFeature.FixtureData>, Xunit.IAsyncLifetime
+    public partial class DeleteClienteFeature : object, Xunit.IClassFixture<DeleteClienteFeature.FixtureData>, Xunit.IAsyncLifetime
     {
         
         private global::Reqnroll.ITestRunner testRunner;
         
         private static string[] featureTags = ((string[])(null));
         
-        private static global::Reqnroll.FeatureInfo featureInfo = new global::Reqnroll.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "Area", "A short summary of the feature", global::Reqnroll.ProgrammingLanguage.CSharp, featureTags);
+        private static global::Reqnroll.FeatureInfo featureInfo = new global::Reqnroll.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "DeleteCliente", "A short summary of the feature", global::Reqnroll.ProgrammingLanguage.CSharp, featureTags);
         
         private Xunit.Abstractions.ITestOutputHelper _testOutputHelper;
         
-#line 1 "Area.feature"
+#line 1 "DeleteCliente.feature"
 #line hidden
         
-        public AreaFeature(AreaFeature.FixtureData fixtureData, Xunit.Abstractions.ITestOutputHelper testOutputHelper)
+        public DeleteClienteFeature(DeleteClienteFeature.FixtureData fixtureData, Xunit.Abstractions.ITestOutputHelper testOutputHelper)
         {
             this._testOutputHelper = testOutputHelper;
         }
@@ -93,7 +93,7 @@ namespace ReqnrollTestProject.Features
         }
         
         [Xunit.SkippableFactAttribute(DisplayName="[scenario name]")]
-        [Xunit.TraitAttribute("FeatureTitle", "Area")]
+        [Xunit.TraitAttribute("FeatureTitle", "DeleteCliente")]
         [Xunit.TraitAttribute("Description", "[scenario name]")]
         [Xunit.TraitAttribute("Category", "tag1")]
         public async System.Threading.Tasks.Task ScenarioName()
@@ -132,12 +132,12 @@ this.ScenarioInitialize(scenarioInfo);
             
             async System.Threading.Tasks.Task Xunit.IAsyncLifetime.InitializeAsync()
             {
-                await AreaFeature.FeatureSetupAsync();
+                await DeleteClienteFeature.FeatureSetupAsync();
             }
             
             async System.Threading.Tasks.Task Xunit.IAsyncLifetime.DisposeAsync()
             {
-                await AreaFeature.FeatureTearDownAsync();
+                await DeleteClienteFeature.FeatureTearDownAsync();
             }
         }
     }

@@ -19,21 +19,21 @@ namespace ReqnrollTestProject.Features
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Reqnroll", "2.0.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public partial class DeleteFeature : object, Xunit.IClassFixture<DeleteFeature.FixtureData>, Xunit.IAsyncLifetime
+    public partial class InsertClienteFeature : object, Xunit.IClassFixture<InsertClienteFeature.FixtureData>, Xunit.IAsyncLifetime
     {
         
         private global::Reqnroll.ITestRunner testRunner;
         
         private static string[] featureTags = ((string[])(null));
         
-        private static global::Reqnroll.FeatureInfo featureInfo = new global::Reqnroll.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "Delete", "A short summary of the feature", global::Reqnroll.ProgrammingLanguage.CSharp, featureTags);
+        private static global::Reqnroll.FeatureInfo featureInfo = new global::Reqnroll.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "InsertCliente", "Insertar un nuevo cliente al sistema", global::Reqnroll.ProgrammingLanguage.CSharp, featureTags);
         
         private Xunit.Abstractions.ITestOutputHelper _testOutputHelper;
         
-#line 1 "Delete.feature"
+#line 1 "InsertCliente.feature"
 #line hidden
         
-        public DeleteFeature(DeleteFeature.FixtureData fixtureData, Xunit.Abstractions.ITestOutputHelper testOutputHelper)
+        public InsertClienteFeature(InsertClienteFeature.FixtureData fixtureData, Xunit.Abstractions.ITestOutputHelper testOutputHelper)
         {
             this._testOutputHelper = testOutputHelper;
         }
@@ -92,16 +92,16 @@ namespace ReqnrollTestProject.Features
             await this.TestTearDownAsync();
         }
         
-        [Xunit.SkippableFactAttribute(DisplayName="[scenario name]")]
-        [Xunit.TraitAttribute("FeatureTitle", "Delete")]
-        [Xunit.TraitAttribute("Description", "[scenario name]")]
+        [Xunit.SkippableFactAttribute(DisplayName="Usuario ingresa datos validos")]
+        [Xunit.TraitAttribute("FeatureTitle", "InsertCliente")]
+        [Xunit.TraitAttribute("Description", "Usuario ingresa datos validos")]
         [Xunit.TraitAttribute("Category", "tag1")]
-        public async System.Threading.Tasks.Task ScenarioName()
+        public async System.Threading.Tasks.Task UsuarioIngresaDatosValidos()
         {
             string[] tagsOfScenario = new string[] {
                     "tag1"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("[scenario name]", null, tagsOfScenario, argumentsOfScenario, featureTags);
+            global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("Usuario ingresa datos validos", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 6
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -113,13 +113,37 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 await this.ScenarioStartAsync();
 #line 7
- await testRunner.GivenAsync("[context]", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
+ await testRunner.GivenAsync("El usuario se necuentra en la pagina Cliente", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
 #line hidden
 #line 8
- await testRunner.WhenAsync("[action]", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
+ await testRunner.AndAsync("El usuario da clic en el boton nuevo Cliente", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
+                global::Reqnroll.Table table4 = new global::Reqnroll.Table(new string[] {
+                            "Cedula",
+                            "Apellidos",
+                            "Nombres",
+                            "FechaNacimiento",
+                            "Mail",
+                            "Telefono",
+                            "Direccion",
+                            "Estado"});
+                table4.AddRow(new string[] {
+                            "0402084040",
+                            "Muñoz",
+                            "Jose",
+                            "1999-12-12T12:00",
+                            "juan_test@email.com",
+                            "098765432",
+                            "Sangolqui",
+                            "1"});
 #line 9
- await testRunner.ThenAsync("[outcome]", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
+ await testRunner.WhenAsync("El usuario ingresa los siguientes datos", ((string)(null)), table4, "When ");
+#line hidden
+#line 12
+ await testRunner.AndAsync("Hacer clic en el boton crear", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
+#line hidden
+#line 13
+ await testRunner.ThenAsync("el usuario se queda en la pagina agregar cliente", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
 #line hidden
             }
             await this.ScenarioCleanupAsync();
@@ -132,12 +156,12 @@ this.ScenarioInitialize(scenarioInfo);
             
             async System.Threading.Tasks.Task Xunit.IAsyncLifetime.InitializeAsync()
             {
-                await DeleteFeature.FeatureSetupAsync();
+                await InsertClienteFeature.FeatureSetupAsync();
             }
             
             async System.Threading.Tasks.Task Xunit.IAsyncLifetime.DisposeAsync()
             {
-                await DeleteFeature.FeatureTearDownAsync();
+                await InsertClienteFeature.FeatureTearDownAsync();
             }
         }
     }

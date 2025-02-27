@@ -13,7 +13,7 @@ namespace ReqnrollTestProject.StepDefinitions
         public void GivenCompletarLaInformacionEnElFormulario(DataTable dataTable)
         {
             var resultado = dataTable.Rows.Count();
-            
+
             //Assert
             Assert.True(resultado > 0);
 
@@ -22,7 +22,7 @@ namespace ReqnrollTestProject.StepDefinitions
         [When("Registro del Cliente en la BDD")]
         public void WhenRegistroDelClienteEnLaBDD(DataTable dataTable)
         {
-            var cliente = dataTable.CreateSet < Cliente>().ToList();
+            var cliente = dataTable.CreateSet<Cliente>().ToList();
 
             Cliente cls = new Cliente();
 
@@ -55,8 +55,8 @@ namespace ReqnrollTestProject.StepDefinitions
                 if (cliente != null)
                 {
                     encontrado = true;
-                }               
-                
+                }
+
             }
 
             Assert.True(encontrado);

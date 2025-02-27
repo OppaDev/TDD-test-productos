@@ -19,21 +19,21 @@ namespace ReqnrollTestProject.Features
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Reqnroll", "2.0.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public partial class EditFeature : object, Xunit.IClassFixture<EditFeature.FixtureData>, Xunit.IAsyncLifetime
+    public partial class EditClienteFeature : object, Xunit.IClassFixture<EditClienteFeature.FixtureData>, Xunit.IAsyncLifetime
     {
         
         private global::Reqnroll.ITestRunner testRunner;
         
         private static string[] featureTags = ((string[])(null));
         
-        private static global::Reqnroll.FeatureInfo featureInfo = new global::Reqnroll.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "Edit", "Proceso de Realizar Testing BDD en Edit", global::Reqnroll.ProgrammingLanguage.CSharp, featureTags);
+        private static global::Reqnroll.FeatureInfo featureInfo = new global::Reqnroll.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "EditCliente", "A short summary of the feature", global::Reqnroll.ProgrammingLanguage.CSharp, featureTags);
         
         private Xunit.Abstractions.ITestOutputHelper _testOutputHelper;
         
-#line 1 "Edit.feature"
+#line 1 "EditCliente.feature"
 #line hidden
         
-        public EditFeature(EditFeature.FixtureData fixtureData, Xunit.Abstractions.ITestOutputHelper testOutputHelper)
+        public EditClienteFeature(EditClienteFeature.FixtureData fixtureData, Xunit.Abstractions.ITestOutputHelper testOutputHelper)
         {
             this._testOutputHelper = testOutputHelper;
         }
@@ -92,16 +92,16 @@ namespace ReqnrollTestProject.Features
             await this.TestTearDownAsync();
         }
         
-        [Xunit.SkippableFactAttribute(DisplayName="Edit Data")]
-        [Xunit.TraitAttribute("FeatureTitle", "Edit")]
-        [Xunit.TraitAttribute("Description", "Edit Data")]
+        [Xunit.SkippableFactAttribute(DisplayName="[scenario name]")]
+        [Xunit.TraitAttribute("FeatureTitle", "EditCliente")]
+        [Xunit.TraitAttribute("Description", "[scenario name]")]
         [Xunit.TraitAttribute("Category", "tag1")]
-        public async System.Threading.Tasks.Task EditData()
+        public async System.Threading.Tasks.Task ScenarioName()
         {
             string[] tagsOfScenario = new string[] {
                     "tag1"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("Edit Data", null, tagsOfScenario, argumentsOfScenario, featureTags);
+            global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("[scenario name]", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 6
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -112,68 +112,14 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 await this.ScenarioStartAsync();
-                global::Reqnroll.Table table1 = new global::Reqnroll.Table(new string[] {
-                            "Cedula",
-                            "Apellidos",
-                            "Nombres",
-                            "FechaNacimiento",
-                            "Mail",
-                            "Telefono",
-                            "Direccion",
-                            "Estado"});
-                table1.AddRow(new string[] {
-                            "0402084040",
-                            "Muñoz",
-                            "Jose",
-                            "1999-12-12T12:00",
-                            "ejemplo@mail.com",
-                            "09876543",
-                            "Quito",
-                            "1"});
 #line 7
- await testRunner.GivenAsync("Mostrar la informacion a editar en el formulario", ((string)(null)), table1, "Given ");
+ await testRunner.GivenAsync("[context]", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
 #line hidden
-                global::Reqnroll.Table table2 = new global::Reqnroll.Table(new string[] {
-                            "Cedula",
-                            "Apellidos",
-                            "Nombres",
-                            "FechaNacimiento",
-                            "Mail",
-                            "Telefono",
-                            "Direccion",
-                            "Estado"});
-                table2.AddRow(new string[] {
-                            "0402084040",
-                            "Muñoz",
-                            "Jose",
-                            "1999-12-12T12:00",
-                            "cambio@mail.com",
-                            "0987451236",
-                            "Sangolqui",
-                            "1"});
-#line 10
- await testRunner.WhenAsync("Edicion de los datos del cliente en la BDD", ((string)(null)), table2, "When ");
+#line 8
+ await testRunner.WhenAsync("[action]", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
-                global::Reqnroll.Table table3 = new global::Reqnroll.Table(new string[] {
-                            "Cedula",
-                            "Apellidos",
-                            "Nombres",
-                            "FechaNacimiento",
-                            "Mail",
-                            "Telefono",
-                            "Direccion",
-                            "Estado"});
-                table3.AddRow(new string[] {
-                            "0402084040",
-                            "Muñoz",
-                            "Jose",
-                            "1999-12-12T12:00",
-                            "cambio@mail.com",
-                            "0987451236",
-                            "Sangolqui",
-                            "1"});
-#line 13
- await testRunner.ThenAsync("Resultado de la edicion en la BDD", ((string)(null)), table3, "Then ");
+#line 9
+ await testRunner.ThenAsync("[outcome]", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
 #line hidden
             }
             await this.ScenarioCleanupAsync();
@@ -186,12 +132,12 @@ this.ScenarioInitialize(scenarioInfo);
             
             async System.Threading.Tasks.Task Xunit.IAsyncLifetime.InitializeAsync()
             {
-                await EditFeature.FeatureSetupAsync();
+                await EditClienteFeature.FeatureSetupAsync();
             }
             
             async System.Threading.Tasks.Task Xunit.IAsyncLifetime.DisposeAsync()
             {
-                await EditFeature.FeatureTearDownAsync();
+                await EditClienteFeature.FeatureTearDownAsync();
             }
         }
     }
